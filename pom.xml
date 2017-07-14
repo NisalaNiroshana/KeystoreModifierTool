@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>Keystore</groupId>
+    <artifactId>keystore</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.ws.commons.axiom.wso2</groupId>
+            <artifactId>axiom</artifactId>
+            <version>${org.apache.axiom.om.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle.wso2</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>${org.bouncycastle.wso2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.core.services</artifactId>
+            <version>${org.wso2.carbon.core.services.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.logging</artifactId>
+            <version>${org.wso2.carbon.logging.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.registry.core</artifactId>
+            <version>${carbon.registry.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.registry.api</artifactId>
+            <version>${org.wso2.carbon.registry.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon</groupId>
+            <artifactId>org.wso2.carbon.utils</artifactId>
+            <version>${org.wso2.carbon.utils.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-scxml.wso2</groupId>
+            <artifactId>commons-scxml</artifactId>
+            <version>${commons-scxml.wso2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons-codec.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang.wso2</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons-lang.wso2.version}</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>wso2-nexus</id>
+            <name>WSO2 internal Repository</name>
+            <url>http://maven.wso2.org/nexus/content/groups/wso2-public/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+        <repository>
+            <id>wso2.releases</id>
+            <name>WSO2 internal Repository</name>
+            <url>http://maven.wso2.org/nexus/content/repositories/releases/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+        </repository>
+    </repositories>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <carbon.registry.api.import.version>[1.0.1, 1.1.0)</carbon.registry.api.import.version>
+        <carbon.registry.core.version>4.2.0</carbon.registry.core.version>
+        <carbon.registry.core.service.import.version>[1.0.1, 1.1.0)</carbon.registry.core.service.import.version>
+        <carbon.registry.core.import.version>[1.0.1, 1.1.0)</carbon.registry.core.import.version>
+        <carbon.user.api.import.version>[1.0.1, 1.1.0)</carbon.user.api.import.version>
+        <carbon.user.core.service.import.version>[4.2.0, 4.3.0)</carbon.user.core.service.import.version>
+        <carbon.user.core.tenant.import.version>[4.2.0, 4.3.0)</carbon.user.core.tenant.import.version>
+        <commons-codec.version>1.10</commons-codec.version>
+        <commons-scxml.wso2.version>0.9.0.wso2v1</commons-scxml.wso2.version>
+        <org.apache.axiom.om.util.import.version>[1.2.11.wso2v4, 1.3.0)</org.apache.axiom.om.util.import.version>
+        <org.apache.commons.logging.import.version>[1.1.1, 1.2.0)</org.apache.commons.logging.import.version>
+        <org.bouncycastle.jce.provider.import.version>[132.0.0, 132.1.0)</org.bouncycastle.jce.provider.import.version>
+        <org.apache.axiom.om.version>1.2.11.wso2v4</org.apache.axiom.om.version>
+        <org.osgi.service.component.import.version>[1.2.0, 1.3.0)</org.osgi.service.component.import.version>
+        <org.apache.felix.src.plugin.version>1.7.2</org.apache.felix.src.plugin.version>
+        <org.apache.felix.budnle.plugin.version>2.5.3</org.apache.felix.budnle.plugin.version>
+        <org.bouncycastle.wso2.version>1.49.0.wso2v2</org.bouncycastle.wso2.version>
+        <org.wso2.carbon.core.services.version>4.2.0</org.wso2.carbon.core.services.version>
+        <org.wso2.carbon.context.import.version>[4.2.0, 4.3.0)</org.wso2.carbon.context.import.version>
+        <org.wso2.carbon.logging.version>4.2.0</org.wso2.carbon.logging.version>
+        <org.wso2.carbon.utils.version>4.0.2</org.wso2.carbon.utils.version>
+        <org.wso2.carbon.registry.api.version>4.2.0</org.wso2.carbon.registry.api.version>
+        <org.wso2.carbon.utils.import.version>[4.2.0, 4.3.0)</org.wso2.carbon.utils.import.version>
+        <default.import.version>[0.0.0, 0.1.0)</default.import.version>
+        <keychange.version>1.0</keychange.version>
+        <commons-lang.wso2.version>2.6.0.wso2v1</commons-lang.wso2.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
