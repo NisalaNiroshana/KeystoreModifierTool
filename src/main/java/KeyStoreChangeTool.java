@@ -58,7 +58,6 @@ public class KeyStoreChangeTool {
     private static KeyStoreChange readConfigXML() throws KeyChangeException, IOException {
         try {
             LOGGER.info("Started reading the configuration file - keystoreChange.xml");
-            Files.createFile(Paths.get("kk.txt"));
             SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
             Schema schema = sf.newSchema(new File(KeyChangeConstants.KEYSTORE_CHANGE_XSD));
             JAXBContext jaxbContext = JAXBContext.newInstance(KeyStoreChange.class);
