@@ -37,14 +37,14 @@ public class KeyStoreChangeTool {
             for (int i = 0; i < keyStoreChange.getEncryptedValues().getEncryptedValue().size(); i++) {
                 decryptedValue = keyStoreUtils.decrypt(decode(
                         keyStoreChange.getEncryptedValues().getEncryptedValue().get(i).getContent()),
-                        keyStoreChange.getKeyStores().getNewKeyStorePath(),
-                        keyStoreChange.getKeyStores().getNewKeyStorePassword(),
-                        keyStoreChange.getKeyStores().getNewKeyStoreAlias());
-
-                String encryptedValue = keyStoreUtils.encrypt(decryptedValue,
                         keyStoreChange.getKeyStores().getOldKeyStorePath(),
                         keyStoreChange.getKeyStores().getOldKeyStorePassword(),
                         keyStoreChange.getKeyStores().getOldKeyStoreAlias());
+
+                String encryptedValue = keyStoreUtils.encrypt(decryptedValue,
+                        keyStoreChange.getKeyStores().getNewKeyStorePath(),
+                        keyStoreChange.getKeyStores().getNewKeyStorePassword(),
+                        keyStoreChange.getKeyStores().getNewKeyStoreAlias());
 
                 map.put(keyStoreChange.getEncryptedValues().getEncryptedValue().get(i).getId(), encryptedValue);
             }
